@@ -124,11 +124,25 @@ Before going live on a custom domain, update the following clearly marked placeh
   - **Option B (Formspree / Formbold / Web3Forms)**: Point the form `action` URL to your form endpoint.
   - **Option C (CRM Webhook)**: POST JSON directly to Zoho CRM, HubSpot, or a Google Sheet webhook.
 
-### 6. Google Map Embed
+### 6. Google Reviews Widget Integration
+📁 **Files:** `src/app/page.tsx`, `src/app/testimonials/page.tsx`
+- [ ] Spaark Enterprises' verified Google Place ID: `0x3bc2b8c6172b9513:0x8f20afb32ca78581`
+- [ ] When ready to integrate an automated live Google Reviews widget (e.g., Elfsight, EmbedSocial, or Google Places API), insert the widget `<script>` or `<iframe>` into the designated placeholder containers marked in both files.
+
+### 7. Google Map Embed
 📁 **File:** `src/app/contact/page.tsx`
-- [ ] Replace the iframe embed query with the exact Google Maps Business Profile location embed of Spaark Enterprises in Old Sangavi, Pune.
+- [x] Embedded with Spaark Enterprises' exact verified Google Maps place ID (`0x3bc2b8c6172b9513:0x8f20afb32ca78581`) and coordinates (`18.5730856, 73.8268903`).
 
 ---
+
+## 🏛️ Competitor-Informed Architecture
+
+This website incorporates strategic patterns synthesized from five industry benchmarks:
+- **Stone Security**: "Premium but grounded" dark-accented base (`#0f172a`, `#0b1329`), confident sans-serif typography, generous whitespace, and **category-first pillars** (Surveillance & Physical Security, Life Safety & Evacuation, Smart AV & Collaboration, Telecommunications & Voice) replacing cluttered flat lists.
+- **Safe House Pune**: High-impact **"Metrics of Success"** bar near the top of the homepage with confident static figures (12+ Years, 650+ Projects, 180+ Active AMCs, 2–4 Hr Breakdown SLA, 97% Client Retention), avoiding broken animated counters.
+- **Stealth Solutions**: Specific, non-generic **Mission & Quality Commitment** statements emphasizing NBC 2016 Part 4 compliance, FRLS conduits, certified cabling, and pre-commissioning burn-in testing.
+- **One Firefly**: Prominent third-party verified **Google Reviews Trust Section** with 4.9★ rating display, direct link to your Google Business Profile, and an explicit placeholder container for third-party review widgets.
+- **Target Commercial Verticals**: 5 buyer-specific industry cards (Manufacturing, IT Parks, Education, Healthcare, Warehousing) allowing B2B decision makers to self-identify immediately.
 
 ## 🚢 Deploying to Vercel
 

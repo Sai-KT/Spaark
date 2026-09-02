@@ -33,7 +33,57 @@ export interface ServiceItem {
   };
   whatsappMessage: string;
   relatedServiceSlugs: string[];
+  category?: "surveillance" | "life-safety" | "audio-visual" | "telecom";
+  categoryTitle?: string;
 }
+
+export interface ServiceCategory {
+  id: "surveillance" | "life-safety" | "audio-visual" | "telecom";
+  title: string;
+  tagline: string;
+  shortDescription: string;
+  icon: string;
+  serviceSlugs: string[];
+}
+
+export const serviceCategories: ServiceCategory[] = [
+  {
+    id: "surveillance",
+    title: "Surveillance & Physical Security",
+    tagline: "High-Definition Video Analytics & Access Verification",
+    shortDescription:
+      "Enterprise IP cameras, thermal perimeter barriers, biometric readers, and optical turnstiles engineered to secure commercial facilities.",
+    icon: "ShieldCheck",
+    serviceSlugs: ["cctv-surveillance-pune", "access-control-system"],
+  },
+  {
+    id: "life-safety",
+    title: "Life Safety & Emergency Systems",
+    tagline: "NBC 2016 Part 4 Compliant Detection & Mass Evacuation",
+    shortDescription:
+      "Addressable smoke detection, optical flame sensors, fire panels, and 100V multi-zone voice evacuation audio systems.",
+    icon: "Flame",
+    serviceSlugs: ["fire-alarm-system", "public-address-system"],
+  },
+  {
+    id: "audio-visual",
+    title: "Smart Audio-Visual & Collaboration",
+    tagline: "Unified Hybrid Boardrooms & High-Impact Displays",
+    shortDescription:
+      "4K interactive flat touch panels, high-lumen laser projection, beamforming ceiling microphones, and Teams/Zoom room systems.",
+    icon: "Video",
+    serviceSlugs: ["projectors-interactive-panels", "video-conferencing-solutions"],
+  },
+  {
+    id: "telecom",
+    title: "Telecommunications & Enterprise Voice",
+    tagline: "Mission-Critical Hybrid IP-PBX & Industrial Intercoms",
+    shortDescription:
+      "Hybrid VoIP PBX servers, analog/digital intercom trunks, auto-attendant routing, and factory-to-office voice networks.",
+    icon: "PhoneCall",
+    serviceSlugs: ["epabx-system"],
+  },
+];
 
 export const servicesData: ServiceItem[] = [
   {

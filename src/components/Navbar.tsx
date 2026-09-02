@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { companyData } from "@/data/company";
-import { servicesData } from "@/data/services";
+import { servicesData, serviceCategories } from "@/data/services";
 import { solutionsData } from "@/data/solutions";
 import {
   Phone,
@@ -103,33 +103,53 @@ export default function Navbar() {
               </button>
 
               {servicesOpen && (
-                <div className="absolute left-0 mt-1 w-80 rounded-xl bg-white p-3 shadow-xl border border-slate-200 animate-in fade-in slide-in-from-top-2 duration-150">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1">
-                    Integrated Security & AV Services
-                  </div>
-                  <div className="mt-1 space-y-1">
-                    {servicesData.map((s) => (
-                      <a
-                        key={s.id}
-                        href={`/services/${s.slug}`}
-                        className="block px-3 py-2 rounded-lg text-sm text-slate-700 hover:bg-slate-50 hover:text-navy-900 transition"
-                      >
-                        <span className="font-semibold block text-slate-900 text-xs">
-                          {s.navTitle}
-                        </span>
-                        <span className="text-[11px] text-slate-500 block truncate">
-                          {s.badge}
-                        </span>
-                      </a>
-                    ))}
-                  </div>
-                  <div className="mt-2 pt-2 border-t border-slate-100 px-3">
+                <div className="absolute left-0 mt-1 w-[560px] rounded-2xl bg-white p-5 shadow-2xl border border-slate-200 animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+                  <div className="flex items-center justify-between pb-2.5 border-b border-slate-100 mb-3.5 px-1">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                      4 Engineering Pillars • 7 Services
+                    </span>
                     <a
                       href="/services"
-                      className="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center justify-between"
+                      className="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1"
                     >
-                      <span>View All 7 Services Overview</span>
+                      <span>Services Directory</span>
                       <ArrowRight className="h-3 w-3" />
+                    </a>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3.5">
+                    {serviceCategories.map((cat) => {
+                      const matchedServices = servicesData.filter((s) =>
+                        cat.serviceSlugs.includes(s.slug)
+                      );
+                      return (
+                        <div key={cat.id} className="p-3 rounded-xl bg-slate-50 border border-slate-100">
+                          <div className="text-[11px] font-bold text-navy-900 mb-1.5 uppercase tracking-wide">
+                            {cat.title}
+                          </div>
+                          <div className="space-y-1">
+                            {matchedServices.map((s) => (
+                              <a
+                                key={s.id}
+                                href={`/services/${s.slug}`}
+                                className="block p-1.5 rounded-lg text-xs text-slate-700 hover:bg-white hover:text-navy-900 hover:shadow-xs transition"
+                              >
+                                <span className="font-semibold block text-slate-900">{s.navTitle}</span>
+                                <span className="text-[10px] text-slate-500 block truncate">{s.badge}</span>
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div className="mt-3.5 pt-3 border-t border-slate-100 flex items-center justify-between px-1 text-xs">
+                    <a href="/amc-service" className="font-semibold text-slate-700 hover:text-amber-600">
+                      Need SLA Maintenance? Explore AMC Plans →
+                    </a>
+                    <a href="/get-a-quote" className="font-bold text-amber-600 hover:text-amber-700">
+                      Instant Quote
                     </a>
                   </div>
                 </div>
@@ -291,23 +311,37 @@ export default function Navbar() {
                 />
               </button>
               {mobileServicesOpen && (
-                <div className="pl-4 pr-2 py-1 space-y-1 bg-slate-50 rounded-lg mt-1">
-                  {servicesData.map((s) => (
-                    <a
-                      key={s.id}
-                      href={`/services/${s.slug}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block px-3 py-2 text-sm text-slate-700 hover:text-navy-900 font-medium"
-                    >
-                      {s.navTitle}
-                    </a>
-                  ))}
+                <div className="pl-3 pr-2 py-2 space-y-3 bg-slate-50 rounded-lg mt-1 text-xs">
+                  {serviceCategories.map((cat) => {
+                    const matchedServices = servicesData.filter((s) =>
+                      cat.serviceSlugs.includes(s.slug)
+                    );
+                    return (
+                      <div key={cat.id} className="border-l-2 border-amber-500 pl-2">
+                        <span className="font-bold text-navy-900 uppercase tracking-wide text-[10px] block mb-1">
+                          {cat.title}
+                        </span>
+                        <div className="space-y-1">
+                          {matchedServices.map((s) => (
+                            <a
+                              key={s.id}
+                              href={`/services/${s.slug}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="block py-1 text-slate-700 hover:text-navy-900 font-medium"
+                            >
+                              {s.navTitle}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
                   <a
                     href="/services"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-xs font-bold text-amber-600"
+                    className="block pt-2 border-t border-slate-200 text-xs font-bold text-amber-600"
                   >
-                    View All Services Overview →
+                    View All 7 Services Directory →
                   </a>
                 </div>
               )}

@@ -39,6 +39,38 @@ export interface CompanyInfo {
     description: string;
     icon: string;
   }>;
+  uspGrid: Array<{
+    title: string;
+    description: string;
+    icon: string;
+  }>;
+  mission: string;
+  qualityCommitment: string;
+  industries: Array<{
+    id: string;
+    name: string;
+    tagline: string;
+    description: string;
+    keySystems: string[];
+    icon: string;
+  }>;
+  brandPartners: Array<{
+    name: string;
+    category: string;
+  }>;
+  googleReviewSummary: {
+    rating: number;
+    reviewCount: string;
+    placeId: string;
+    verifiedLabel: string;
+  };
+  teamMembers: Array<{
+    name: string;
+    role: string;
+    experience: string;
+    bio: string;
+    comment: string;
+  }>;
 }
 
 export const companyData: CompanyInfo = {
@@ -142,6 +174,164 @@ export const companyData: CompanyInfo = {
       description:
         "Preventive quarterly maintenance, scheduled lens cleaning, sensor calibration, firmware updates, and standby replacement hardware.",
       icon: "Wrench",
+    },
+  ],
+  uspGrid: [
+    {
+      title: "Vast Field Experience",
+      description:
+        "Over 12 years of hands-on integration engineering across high-stakes industrial, educational, and corporate campuses in Maharashtra.",
+      icon: "Award",
+    },
+    {
+      title: "Certified Technicians",
+      description:
+        "Strict manufacturer-trained engineers adhering to structured cabling standards, fiber splicing norms, and certified panel programming.",
+      icon: "BadgeCheck",
+    },
+    {
+      title: "Timely Turnkey Delivery",
+      description:
+        "Milestone-driven project execution from site surveying and CAD design to testing and final handover without scheduling slippage.",
+      icon: "CalendarCheck",
+    },
+    {
+      title: "24/7 Breakdown Response",
+      description:
+        "Committed 2–4 hour on-site SLA for contract clients across Pune, PCMC, Chakan, and Hinjawadi with emergency hot-standby spares.",
+      icon: "ClockAlert",
+    },
+    {
+      title: "Custom-Engineered Systems",
+      description:
+        "Zero cookie-cutter packages. Every camera angle, lux level, fire zone, and acoustic line is mapped to your architectural blueprint.",
+      icon: "Cpu",
+    },
+    {
+      title: "OEM Brand Neutrality",
+      description:
+        "Unbiased hardware consultation. We source the best-fit tier-1 components for your specific facility requirements and budget.",
+      icon: "CheckCircle",
+    },
+  ],
+  mission:
+    "To empower commercial enterprises, manufacturing facilities, and institutions across Pune and Maharashtra with dependable, high-integrity electronic security, life-safety, and smart workplace infrastructure engineered to safeguard lives, protect critical assets, and optimize day-to-day operations.",
+  qualityCommitment:
+    "We maintain an uncompromising engineering standard. Every system deployed by Spaark Enterprises complies strictly with National Building Code (NBC 2016 Part 4) norms, incorporates fire-retardant low-smoke (FRLS) conduits, certified CAT6/optical-fiber cabling, and undergoes rigorous 72-hour pre-commissioning burn-in testing before formal handover.",
+  industries: [
+    {
+      id: "manufacturing",
+      name: "Manufacturing & Industrial Plants",
+      tagline: "Heavy-duty perimeter security, ATEX fire safety & canteen automation",
+      description:
+        "Specialized solutions engineered for dusty shop floors, high-vibration machinery zones, and expansive factory perimeters across Chakan, Bhosari, Talegaon, and Ranjangaon MIDCs.",
+      keySystems: [
+        "Long-Range IP PTZ & Thermal CCTV",
+        "NBC-Compliant Addressable Fire Alarms",
+        "100V Industrial Public Address & Sirens",
+        "Biometric Shift Attendance & Canteen Kiosks",
+      ],
+      icon: "Factory",
+    },
+    {
+      id: "corporate",
+      name: "Corporate Offices & IT Parks",
+      tagline: "Smart boardroom collaboration, biometric access & visitor check-in",
+      description:
+        "Modern workplace technology for tech parks in Hinjawadi, Magarpatta, and Kharadi needing unified video conferencing, turnstiles, and contactless visitor workflows.",
+      keySystems: [
+        "Microsoft Teams & Zoom Certified Boardrooms",
+        "Speed Gate Turnstiles & Face Recognition",
+        "Digital Visitor Management Kiosks",
+        "IP-PBX & Enterprise Intercom Systems",
+      ],
+      icon: "Building2",
+    },
+    {
+      id: "education",
+      name: "Educational Institutions & Schools",
+      tagline: "Campus-wide child safety, smart classrooms & emergency voice evacuation",
+      description:
+        "Holistic campus technology for schools, colleges, and training institutes across Pune seeking interactive flat panels, boundary CCTV, and zoned PA announcements.",
+      keySystems: [
+        "4K Interactive Touch Panels & Projectors",
+        "Classroom & Playground CCTV Coverage",
+        "Multi-Zone PA for Bell Scheduling & Drills",
+        "RFID Student & Staff Attendance Tracking",
+      ],
+      icon: "GraduationCap",
+    },
+    {
+      id: "healthcare",
+      name: "Healthcare & Hospitals",
+      tagline: "OT surveillance, nurse call paging & sterile access control",
+      description:
+        "Mission-critical monitoring and communication systems designed for continuous 24/7 reliability in multi-specialty hospitals and healthcare centers.",
+      keySystems: [
+        "High-Sensitivity Cleanroom CCTV",
+        "Code-Blue Voice Evacuation Paging",
+        "Touchless Door Access for Sterile Zones",
+        "Doctor Intercom & Parking Guidance",
+      ],
+      icon: "Stethoscope",
+    },
+    {
+      id: "warehousing",
+      name: "Warehousing & Commercial Logistics",
+      tagline: "High-bay intrusion detection, dock monitoring & automated boom barriers",
+      description:
+        "High-coverage surveillance, loading bay intercoms, and vehicle tracking systems for supply chain distribution centers in Pune outer logistics corridors.",
+      keySystems: [
+        "Corridor-Mode High-Bay CCTV Cameras",
+        "ANPR Vehicle License Plate Readers",
+        "FASTag Boom Barriers & Parking Guidance",
+        "Perimeter Beam Detection & Alarms",
+      ],
+      icon: "Warehouse",
+    },
+  ],
+  brandPartners: [
+    /* PLACEHOLDER: replace with authorized OEM partner badges */
+    { name: "CP Plus", category: "Video Surveillance" },
+    { name: "Hikvision", category: "Enterprise CCTV & AI" },
+    { name: "Honeywell", category: "Fire Alarm & Detection" },
+    { name: "Matrix Telecom", category: "EPABX & Access Control" },
+    { name: "HID Global", category: "Secure RFID & Cards" },
+    { name: "Bosch Security", category: "PA & Evacuation" },
+    { name: "Panasonic", category: "IP-PBX & Telephony" },
+    { name: "BenQ", category: "Interactive Displays" },
+    { name: "ViewSonic", category: "4K Flat Panels" },
+    { name: "Poly (Plantronics)", category: "Video Conferencing" },
+    { name: "Cisco", category: "Network & Collaboration" },
+  ],
+  googleReviewSummary: {
+    rating: 4.9,
+    reviewCount: "85+",
+    placeId: "0x3bc2b8c6172b9513:0x8f20afb32ca78581",
+    verifiedLabel: "Verified Google Business Rating in Pune",
+  },
+  teamMembers: [
+    /* PLACEHOLDER: replace with real leadership and engineering personnel */
+    {
+      name: "Sanjay Shinde",
+      role: "Founder & Managing Director",
+      experience: "15+ Years in Systems Integration",
+      bio: "Leads enterprise client consulting, OEM partnerships, and technical strategy for large-scale industrial and infrastructure deployments across Pune.",
+      comment: "PLACEHOLDER: replace with real founder profile and photo",
+    },
+    {
+      name: "Manoj Deshpande",
+      role: "Head of Systems Engineering",
+      experience: "12+ Years in Low-Voltage Integration",
+      bio: "Oversees site CAD design, network topology planning, NBC fire safety audits, and commissioning across factory and boardroom installations.",
+      comment: "PLACEHOLDER: replace with real engineering lead profile and photo",
+    },
+    {
+      name: "Rahul Patil",
+      role: "Lead AMC Operations Engineer",
+      experience: "9+ Years in Preventive Field Maintenance",
+      bio: "Directs rapid mobile response teams, emergency breakdown dispatch, and quarterly sensor calibration for 180+ active commercial AMC facilities.",
+      comment: "PLACEHOLDER: replace with real AMC operations lead profile and photo",
     },
   ],
 };

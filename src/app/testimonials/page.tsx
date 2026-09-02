@@ -88,36 +88,58 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Google Review Badge Widget Simulation */}
-      <section className="py-16 bg-white border-t border-slate-200">
+      {/* Google Review Section (One Firefly Inspired - Third-Party Verified Trust) */}
+      <section className="py-20 bg-slate-100 border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <div className="h-14 w-14 rounded-2xl bg-white border border-slate-200 shadow flex items-center justify-center font-black text-xl text-blue-600">
-                G
-              </div>
-              <div>
-                <div className="flex items-center gap-1 text-amber-400 mb-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                  ))}
-                  <span className="text-slate-900 font-black text-sm ml-2">4.9 / 5.0</span>
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 sm:p-10 shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-100">
+              <div className="flex items-center gap-4">
+                <div className="h-16 w-16 rounded-2xl bg-slate-900 text-amber-400 border border-slate-800 shadow-sm flex items-center justify-center font-black text-2xl">
+                  G
                 </div>
-                <div className="text-xs text-slate-600">
-                  {/* PLACEHOLDER: Google Reviews count */}
-                  Based on 85+ verified client reviews on Google Business for Spaark Enterprises Pune.
+                <div>
+                  <div className="flex items-center gap-1.5 text-amber-500 mb-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                    ))}
+                    <span className="text-slate-900 font-black text-base ml-1.5">4.9 / 5.0</span>
+                  </div>
+                  <div className="text-xs font-semibold text-slate-700">
+                    Verified Google Business Reviews for Spaark Enterprises Pune
+                  </div>
+                  <div className="text-[11px] text-slate-500">
+                    Google Place ID:{" "}
+                    <code className="bg-slate-100 px-1.5 py-0.5 rounded text-amber-700 font-mono text-[10px]">
+                      0x3bc2b8c6172b9513:0x8f20afb32ca78581
+                    </code>
+                  </div>
                 </div>
               </div>
+
+              <a
+                href="https://www.google.com/maps/place/Spaark+Enterprises/@18.5730856,73.82431,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2b8c6172b9513:0x8f20afb32ca78581!8m2!3d18.5730856!4d73.8268903!16s%2Fg%2F11cks6m6vr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold uppercase tracking-wider transition shadow-sm shrink-0 self-start md:self-auto"
+              >
+                Review Us on Google
+              </a>
             </div>
 
-            <a
-              href="https://www.google.com/maps/place/Spaark+Enterprises/@18.5730856,73.82431,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2b8c6172b9513:0x8f20afb32ca78581!8m2!3d18.5730856!4d73.8268903!16s%2Fg%2F11cks6m6vr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2.5 rounded-lg bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 text-xs font-bold transition shadow-sm"
-            >
-              Review Us on Google
-            </a>
+            {/* PLACEHOLDER: Google Reviews Widget Embed Slot */}
+            {/* When ready to integrate a live dynamic feed, insert the third-party widget embed script (e.g. Elfsight / EmbedSocial) here */}
+            <div className="mt-6 border-2 border-dashed border-slate-200 rounded-2xl p-6 bg-slate-50 text-center">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">
+                Live Google Review Carousel Placeholder
+              </span>
+              <p className="text-xs text-slate-600 max-w-lg mx-auto mb-3">
+                &ldquo;Exceptional execution on our campus CCTV and addressable fire alarm system in
+                Pune. The team was prompt, knowledgeable, and met all AMC response SLAs.&rdquo;
+              </p>
+              <span className="text-[11px] font-semibold text-slate-500">
+                — Verified Pune Enterprise Facility Client
+              </span>
+            </div>
           </div>
         </div>
       </section>
