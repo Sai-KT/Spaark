@@ -52,10 +52,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <LocalBusinessSchema />
-      </head>
       <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans antialiased">
+        <LocalBusinessSchema />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

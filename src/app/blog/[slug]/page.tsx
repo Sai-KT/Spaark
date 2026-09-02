@@ -7,7 +7,6 @@ import {
   User,
   ArrowRight,
   ChevronRight,
-  Share2,
   BookmarkCheck,
   ShieldCheck,
 } from "lucide-react";

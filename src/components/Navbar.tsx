@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/navigation";
+import Link from "next/link";
 import { useState } from "react";
 import { companyData } from "@/data/company";
 import { servicesData } from "@/data/services";
