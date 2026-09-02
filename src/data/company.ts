@@ -26,6 +26,7 @@ export interface CompanyInfo {
     latitude: number;
     longitude: number;
   };
+  googleMapsUrl?: string;
   serviceAreas: string[];
   stats: Array<{
     label: string;
@@ -70,9 +71,11 @@ export const companyData: CompanyInfo = {
     support: "24/7 Emergency AMC Breakdown Support",
   },
   geo: {
-    latitude: 18.5724,
-    longitude: 73.8188,
+    latitude: 18.5730856,
+    longitude: 73.8268903,
   },
+  googleMapsUrl:
+    "https://www.google.com/maps/place/Spaark+Enterprises/@18.5730856,73.82431,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2b8c6172b9513:0x8f20afb32ca78581!8m2!3d18.5730856!4d73.8268903!16s%2Fg%2F11cks6m6vr",
   serviceAreas: [
     "Old Sangavi & Pimple Gurav",
     "Pimpri-Chinchwad (PCMC)",

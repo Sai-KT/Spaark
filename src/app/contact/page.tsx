@@ -173,7 +173,7 @@ export default function ContactPage() {
               </p>
             </div>
             <a
-              href="https://maps.google.com/?q=Old+Sangavi+Pune+Maharashtra+411027"
+              href="https://www.google.com/maps/place/Spaark+Enterprises/@18.5730856,73.82431,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2b8c6172b9513:0x8f20afb32ca78581!8m2!3d18.5730856!4d73.8268903!16s%2Fg%2F11cks6m6vr"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold transition shrink-0"
@@ -187,7 +187,7 @@ export default function ContactPage() {
           <div className="w-full h-96 rounded-3xl overflow-hidden border border-slate-200 shadow-md">
             <iframe
               title="Spaark Enterprises Location in Old Sangavi, Pune"
-              src="https://maps.google.com/maps?q=Old+Sangavi,+Pune,+Maharashtra+411027&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=18.5730856,73.8268903+(Spaark+Enterprises)&t=&z=17&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
